@@ -9,4 +9,4 @@ Clear input and delete functionality
 Responsive design
 User-friendly interface
 
-Live View:
+Live Preiew: https://evelynemunguti.github.io/Calculator/
