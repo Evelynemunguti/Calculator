@@ -9,8 +9,11 @@ Features
 
 
 Basic operations: Add, Subtract, Multiply, Divide
+
 Clear input and delete functionality
+
 Responsive design
+
 User-friendly interface
 
 
