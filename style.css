@@ -7,6 +7,7 @@ body{
   justify-content: center;   
   align-items: center;       
   background-color: #f2f2f2; 
+  font-weight: bolder;
 }
 
 #calc{
@@ -21,7 +22,7 @@ body{
 button{
     
   flex: 4;
-  padding: 20px;
+  padding: 15px;
   font-size: 18px;
   border: none;
   border-radius: 8px;
@@ -37,4 +38,7 @@ button{
 
   #equals, #cancel, #del, #perc, #div, #mult, #min, #add{
     color: orange;
+  }
+  #ans{
+    padding-bottom: 5px;
   }
