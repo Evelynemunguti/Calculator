@@ -1,9 +1,5 @@
-const calc=document.getElementById("calc");
-const row=document.getElementById("row");
+const row= document.getElementsByClassName("row");
+const calc= document.getElementById("row");
+const display= document.getElementById("display");
 
-
-
-function dispVal(){
-    const val= ("onclick=display.value+='7'");
-    
-}
+let currentInput= "";
