@@ -39,6 +39,7 @@ button{
   #equals, #cancel, #del, #perc, #div, #mult, #min, #add{
     color: orange;
   }
-  #ans{
+  #display{
     padding-bottom: 5px;
+    color:black;
   }
