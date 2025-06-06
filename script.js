@@ -23,5 +23,16 @@ buttton.forEach(button => {
     else {
         currentInput +=value;
     }
-});
 
+    display.textContent = currentInput; // this applies when I am using a div
+    display.style.color = "black";
+
+});
+function calculate(expression) {
+    try {
+      const result = Function('"use strict";return (' + expression + ')')();
+      return result.toString();
+    } catch {
+      return 'Error';
+    }
+  }
