@@ -1,38 +1,33 @@
-const row= document.getElementsByClassName("row");
-const calc= document.getElementById("row");
-const display= document.getElementById("display");
+const display = document.getElementById("display");
+const buttons = document.querySelectorAll("button"); // Fix: use correct variable name and selector
 
-let currentInput= '';
+let currentInput = '';
 
-buttton.forEach(button => {
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const value = button.getAttribute("data-value"); // Fix: use button.getAttribute, not getAttribute alone
 
-    button.addEventListener('click',() =>{
-        const value= getAttribute('data-value');
-    })
-    
-
-    if (value= "C"){
-    currentInput= '';
-    }
-    else if (value="X"){
-        currentInput=currentInput.slice(0,-1);
-    }
-    else if(value=== "="){
-        currentInput=calculate(currentInput);
-    }
-    else {
-        currentInput +=value;
+    if (value === "C") {
+      currentInput = '';
+    } else if (value === "X") {
+      currentInput = currentInput.slice(0, -1);
+    } else if (value === "=") {
+      currentInput = calculate(currentInput);
+    } else {
+      currentInput += value;
     }
 
-    display.textContent = currentInput; // this applies when I am using a div
+    display.textContent = currentInput; // you're using a <div>, so textContent is correct
     display.style.color = "black";
-
+  });
 });
+
 function calculate(expression) {
-    try {
-      const result = Function('"use strict";return (' + expression + ')')();
-      return result.toString();
-    } catch {
-      return 'Error';
-    }
+  try {
+    const result = Function('"use strict"; return (' + expression + ')')();
+    return result.toString();
+  } catch {
+    return "Error";
   }
+}
+
